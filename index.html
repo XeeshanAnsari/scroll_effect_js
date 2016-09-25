@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll effect</title>
+    <style>
+        #header{
+            background-color: black;
+            width: 100%;
+            height: 150px;
+            position: fixed; 
+        }
+        .contant{
+            height: 10000px;
+        }
+    </style>
+</head>
+<body>
+  <div id="header">
+      
+  </div>
+  <div class="contant">
+      
+  </div>
+  <script>
+      function scroll(){
+          var headerTop = document.getElementById("header");
+          var ypos = window.pageYOffset;
+          if( ypos > 587){
+              headerTop.style.height = "70px";
+              headerTop.style.opacity = "0.5";
+          }  
+          else{
+              headerTop.style.height = "150px";
+              headerTop.style.opacity = "1";
+          }   
+      }
+          window.addEventListener("scroll",scroll);
+  </script>
+</body>
+</html>
